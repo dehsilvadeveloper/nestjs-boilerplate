@@ -13,6 +13,8 @@ services:
       - ${APP_PORT}:3000
       - 9229:9229
     command: npm run start
+    environment:
+      TZ: "${APP_TIMEZONE}"
     env_file:
       - .env
     restart: unless-stopped
